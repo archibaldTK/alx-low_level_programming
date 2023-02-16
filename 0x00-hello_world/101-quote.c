@@ -1,17 +1,12 @@
-#include <stdio.h>
-#include <string.h>
+#include <stdioh>
 #include <unistd.h>
 /**
- * main - string of code that prints without the printf & puts function
+ * main - string of code that prints a line to the standard error
  *
- * Return: 1
+ * Return: 1 (Success)
 */
 int main(void)
 {
-	int s = strlen("and that piece of art is useful,\" - Dora Korpar, 2015-10-19\n");
-
-	write(2,
-		"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n,
-		s);
+	fput("and that piece of art is useful,\" - Dora Korpar, 2015-10-19\n" stdout);
 	return (1);
 }
