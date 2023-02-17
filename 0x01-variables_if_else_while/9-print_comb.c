@@ -1,22 +1,28 @@
 #include <stdio.h>
 /**
- * main - print if the number is postive, zero, or negative
- *
- * Description: using the main function
- * this program prints "Programming is positive, zero, or negative
+ * main - main block
+ * Description: Print all possible combinations fo single-digit numbers.
+ * Numbers must be separated by commas and a space.
+ * You can only use `putchar` to print to console
+ * You can only use `putchar` up to four times.
+ * You are not allowed to use any variable of type `char`.
  * Return: 0
  */
 int main(void)
 {
-char c;
-for (c = '0'; c <= '9'; c++)
-{
-	putchar(c);
-}
-for (c = 'a'; c <= 'f'; c++)
-{
-	putchar(c);
-}
-putchar('\n');
-return (0);
+	int i = 0;
+
+	while (i < 10)
+	{
+		putchar(i + '0');
+		if (i < 9)
+		{
+			putchar(44);
+			putchar(32);
+		}
+		i++;
+	}
+	putchar('\n');
+
+	return (0);
 }
