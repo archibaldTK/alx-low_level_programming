@@ -16,5 +16,5 @@ int main(void)
 			c++;
 		}
 	putchar('\n');
-	retun (0)
+	return (0)
 }
