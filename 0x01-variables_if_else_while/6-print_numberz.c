@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - program that prints numbers from 0 to 99.
+ * main - program entry point
+ *
  * Return: 0
  */
 
