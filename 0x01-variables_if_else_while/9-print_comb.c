@@ -1,15 +1,15 @@
 #include <stdio.h>
 /**
- * main - entry point
+ * main - main entry point
  * Code by Archibald TK
- * return (0) (Success);
+ * return: (0) (Success)
 */
 
 int main(void)
 {
 	int a;
 
-	for (a = 0, a < 10, a++)
+	for (a = 0, a < 10, a++);
 	{
 		putchar(a + '0');
 		if (a < 9)
