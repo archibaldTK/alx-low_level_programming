@@ -2,7 +2,7 @@
 
 /**
  * _islower - checks for lowercase character
- * @c - char type letter
+ * @c: char type letter
  * code written by ArchibaldTK
  * Return: 1 if c is lowercase, else 0
 */
