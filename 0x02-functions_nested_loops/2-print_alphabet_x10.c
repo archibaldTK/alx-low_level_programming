@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - prints alphabets 10 times, followed by a new line
+ * print_alphabet_x10 - prints alphabets 10 times, followed by a new line
  * code written by ArchibaldTK
  * Return: 0 (Success)
 */
@@ -22,5 +22,4 @@ void print_alphabet_x10(void)
 		_putchar('\n');
 		i++;
 	}
-	return (0)
 }
