@@ -1,8 +1,9 @@
-#include "main"
+#include "main.h"
 #include <stdio.h>
 
 /**
- * rev_string - function that reverses a string.
+ * rev_string - function that reverses a string
+ * code by ArchibaldTK
  * @s: the paramters for the function
  * Return: Always 0.
  */
