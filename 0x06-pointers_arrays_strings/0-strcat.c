@@ -6,7 +6,7 @@
  * overwriting the terminating null byte (\0) at the end of dest
  * code by ArchibaldTK
  * @dest: the input value
- * @scr: the input value
+ * @src: the input value
  * Return: 0
  */
 

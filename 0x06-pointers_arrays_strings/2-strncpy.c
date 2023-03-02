@@ -4,7 +4,7 @@
  * _strncpy - function that copies a string
  * code by ArchibaldTK
  * @dest: the input value
- * @scr: the input value
+ * @src: the input value
  * @n: the int value for the parameters of the function
  * Return: 0
  */
