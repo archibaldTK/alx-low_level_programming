@@ -7,30 +7,39 @@
  * Return: 0
  */
 
-int _sqrt(int x, int i)
+int sqtRecursive(int n, int m)
 {
-	int square;
-
-	square = i * i;
-	if (square >= x)
-		return (i);
-	else
-		return (_sqrt(x, i + 1));
+	if (n <= 0)
+		return (-1);
+	if (n * n == m)
+		return (n);
+	return (sqtRecursive(n - 1, m));
 }
 
 /**
- * hai - helper function, recursive steps taken
- * @n: number given to original function is_prime_number
- * @d: incrementer divisor
- * Return: 0 if not prime, 1 if prime
- */
+ * _sqrt_recursion - finds the natural square root of a number
+ * @n: given number
+ * Return: square root of n or -1
+ **/
 
-int hai(int n, int d)
+int _sqrt_recursion(int n)
 {
-	if (n % d == 0)
-		return (0);
-	else if (_sqrt(n, 1) < d)
+	if (n == 1)
 		return (1);
-	else
-		return (hai(n, d + 1));
+	return (sqtRecursive(n / 2, n));
+}
+
+/**
+ * is_prime_number - checks if a given number is prime
+ * @n: given number
+ * Return: 1 if number is prime else 0
+ **/
+
+int is_prime_number(int n)
+{
+	if (n <= 1 || _sqrt_recursion(n) >= 1)
+		return (0);
+	if (_sqrt_recursion(n) == -1)
+		return (1);
+	return (_sqrt_recursion(n));
 }
