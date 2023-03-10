@@ -11,42 +11,39 @@
 
 int main(int argc, char *argv[])
 {
-	int total, count;
-	unsigned int i;
-	char *p;
-	int cents[] = {25, 10, 5, 2};
+	int amount, coins;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	total = strtol(argv[1], &p, 10);
-	count = 0;
-
-	if (!*p)
+	amount = atoi(argv[1]);
+	coins = 0;
+	if (amount > 25)
 	{
-		while (total > 1)
-		{
-			for (i = 0; i < sizeof(cents[i]); i++)
-			{
-				if (total >= cents[i])
-				{
-					count += total / cents[i];
-					total = total % cents[i];
-				}
-			}
-		}
-		if (total == 1)
-			count++;
+		while (amount >= 25)
+			amount -= 25, coins++;
 	}
-	else
+	if (amount > 10 && amount < 25)
 	{
-		printf("Error\n");
-		return (1);
+		while (amount >= 10)
+			amount -= 10, coins++;
 	}
-
-	printf("%d\n", count);
+	if (amount > 5 && amount < 10)
+	{
+		while (amount >= 5)
+			amount -= 5, coins++;
+	}
+	if (amount > 2 && amount < 5)
+	{
+		while (amount >= 2)
+			amount -= 2, coins++;
+	}
+	if (amount == 1 || amount == 2 || amount == 5 || amount == 10 || amount == 25)
+	{
+		coins++;
+	}
+	printf("%d\n", coins);
 	return (0);
 }
