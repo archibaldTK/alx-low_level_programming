@@ -11,39 +11,28 @@
 
 int main(int argc, char *argv[])
 {
-	int amount, coins;
-
+	int num, j, result;
+	int coins[] = {25, 10, 5, 2, 1};
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	amount = atoi(argv[1]);
-	coins = 0;
-	if (amount > 25)
+	num = atoi(argv[1]);
+	result = 0;
+	if (num < 0)
 	{
-		while (amount >= 25)
-			amount -= 25, coins++;
+		printf("0\n");
+		return (0);
 	}
-	if (amount > 10 && amount < 25)
+	for (j = 0; j < 5 && num >= 0; j++)
 	{
-		while (amount >= 10)
-			amount -= 10, coins++;
+		while (num >= coins[j])
+		{
+			result++;
+			num -= coins[j];
+		}
 	}
-	if (amount > 5 && amount < 10)
-	{
-		while (amount >= 5)
-			amount -= 5, coins++;
-	}
-	if (amount > 2 && amount < 5)
-	{
-		while (amount >= 2)
-			amount -= 2, coins++;
-	}
-	if (amount == 1 || amount == 2 || amount == 5 || amount == 10 || amount == 25)
-	{
-		coins++;
-	}
-	printf("%d\n", coins);
+	printf("%d\n", result);
 	return (0);
 }
