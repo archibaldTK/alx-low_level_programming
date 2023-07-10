@@ -112,9 +112,9 @@ void print_data(unsigned char *e_ident)
 }
 
 /**
- *  * print_version - Prints the version of an ELF header.
- *   * @e_ident: A pointer to an array containing the ELF version.
- *    */
+ * print_version - Prints the version of an ELF header.
+ * @e_ident: A pointer to an array containing the ELF version.
+ */
 void print_version(unsigned char *e_ident)
 {
 	 printf(" Version: %d",
@@ -244,12 +244,10 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 }
 
 /**
-
-close_file - Closes a file descriptor.
-@fd: The file descriptor to be closed.
-Description: If the file cannot be closed - exit code 100.
+ * close_file - Closes a file descriptor.
+ * @fd: The file descriptor to be closed.
+ * Description: If the file cannot be closed - exit code 100.
 */
-
 void close_elf(int elf)
 {
 	if (close(elf) == -1)
@@ -261,16 +259,14 @@ void close_elf(int elf)
 }
 
 /**
-
-main - Displays the information contained in the
-ELF header at the start of an ELF file.
-@argc: The number of arguments supplied to the program.
-@argv: An array of pointers to the arguments.
-Return: 0 on success.
-Description: If the file is not an ELF File or
-if the function fails to read or access the file - exit code 98.
+ * main - Displays the information contained in the
+ * ELF header at the start of an ELF file.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ * Return: 0 on success.
+ * Description: If the file is not an ELF File or
+ * if the function fails to read or access the file - exit code 98.
 */
-
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
